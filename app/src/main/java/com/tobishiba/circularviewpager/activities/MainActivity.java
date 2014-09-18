@@ -52,7 +52,7 @@ public class MainActivity extends FragmentActivity {
         return new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(final int position, final float positionOffset, final int positionOffsetPixels) {
-                currentPageText.setText(getString(R.string.current_page, position - 1));
+                currentPageText.setText(getString(R.string.current_page, position));
             }
             @Override
             public void onPageSelected(final int position) {}

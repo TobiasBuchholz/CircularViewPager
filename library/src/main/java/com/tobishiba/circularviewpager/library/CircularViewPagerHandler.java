@@ -47,7 +47,7 @@ public class CircularViewPagerHandler implements ViewPager.OnPageChangeListener 
 
     private void invokeOnPageSelected(final int position) {
         if(mListener != null) {
-            mListener.onPageSelected(position);
+            mListener.onPageSelected(position - 1);
         }
     }
 
@@ -69,7 +69,7 @@ public class CircularViewPagerHandler implements ViewPager.OnPageChangeListener 
 
     private void invokeOnPageScrolled(final int position, final float positionOffset, final int positionOffsetPixels) {
         if(mListener != null) {
-            mListener.onPageScrolled(position, positionOffset, positionOffsetPixels);
+            mListener.onPageScrolled(position - 1, positionOffset, positionOffsetPixels);
         }
     }
 }
