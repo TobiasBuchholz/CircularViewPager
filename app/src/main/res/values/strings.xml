@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Circular ViewPager</string>
+    <string name="current_page">The index of the current page is: %s</string>
+    <string name="description">This is a sample app for my implementation of a circular ViewPager</string>
+    <string name="beer">Beer</string>
+    <string name="toast_error_in_app_billing">Unfortunately there was a payment problem: %s</string>
+</resources>
