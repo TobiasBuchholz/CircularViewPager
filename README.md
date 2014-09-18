@@ -16,7 +16,7 @@ You can also download the sample app in the Google Play Store: [demo](https://pl
 
 ##Usage
 
-Add a usual ViewPager to you layout and set the `overScrollMode` to `never`:
+Add a usual ViewPager to your layout and set the `overScrollMode` to `never` to avoid bad user experience:
 
 ```xml
 	<android.support.v4.view.ViewPager
