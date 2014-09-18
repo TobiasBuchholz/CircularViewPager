@@ -64,6 +64,13 @@ circularViewPagerHandler.setOnPageChangeListener(createOnPageChangeListener());
 viewPager.setOnPageChangeListener(circularViewPagerHandler);
 ```
 
+##How does it work
+To achieve circular scrolling the `BaseCircularViewPagerAdapter` pretends to have two more items, a "copy" of the last item at the very first position and a "copy" of the first item at the very last position. This is realised by just increasing the value returned at the `getCount()` method of the adapter by 2 and handling to return the correct item for the current position. 
+
+If the items would be *A* | *B* | *C*, the adapter actually "contains" *C* | *A* | *B* | *C* | *A*. The initial position of the adapter is 1, so it displays *A*. If the user now swipes left, the first *C* gets displayed. After *C* has settled, the current position of the `ViewPager` gets set to 3 by the `CircularViewPagerHandler`, so the second *C* gets displayed. The user can now swipe again and again until the procedure repeats. The same concept applies to the other direction. 
+
+That's it, this enables circular scrolling for a `ViewPager`.
+
 </br>
 ##Contribution
 If you would like to contribute to this project make sure you send pull request to <b>dev</b> branch or create an issue.
