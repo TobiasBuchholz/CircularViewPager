@@ -71,6 +71,16 @@ If the items would be *A* | *B* | *C*, the adapter actually "contains" *C* | *A*
 
 That's it, this enables circular scrolling for a `ViewPager`.
 
+##Integration
+
+The lib is available on Maven Central, you can find it with [Gradle, please](http://gradleplease.appspot.com/#circularviewpager)
+
+```
+dependencies {
+    compile 'com.github.tobiasbuchholz:circularviewpager:1.0.0'
+}
+```
+
 </br>
 ##Contribution
 If you would like to contribute to this project make sure you send pull request to <b>dev</b> branch or create an issue.
