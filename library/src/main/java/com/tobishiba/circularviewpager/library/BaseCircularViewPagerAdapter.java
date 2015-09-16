@@ -1,8 +1,8 @@
 package com.tobishiba.circularviewpager.library;
 
-import android.support.v4.app.FixedFragmentStatePagerAdapter;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
+import android.app.Fragment;
+import android.app.FragmentManager;
+import android.support.v13.app.FragmentStatePagerAdapter;
 
 import java.util.List;
 
@@ -10,7 +10,7 @@ import java.util.List;
  * User: tobiasbuchholz
  * Date: 18.09.14 | Time: 13:18
  */
-public abstract class BaseCircularViewPagerAdapter<Item> extends FixedFragmentStatePagerAdapter {
+public abstract class BaseCircularViewPagerAdapter<Item> extends FragmentStatePagerAdapter {
     private List<Item> mItems;
 
     public BaseCircularViewPagerAdapter(final FragmentManager fragmentManager, final List<Item> items) {
