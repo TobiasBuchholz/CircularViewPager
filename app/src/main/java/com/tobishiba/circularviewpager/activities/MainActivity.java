@@ -41,10 +41,10 @@ public class MainActivity extends FragmentActivity {
 
     private void initViews() {
         final ViewPager viewPager = (ViewPager) findViewById(R.id.activity_main_view_pager);
-        viewPager.setAdapter(new MemeCircularViewPagerAdapter(this, getFragmentManager(), Meme.createSampleMemes()));
+        viewPager.setAdapter(new MemeCircularViewPagerAdapter(this, getSupportFragmentManager(), Meme.createSampleMemes()));
         final CircularViewPagerHandler circularViewPagerHandler = new CircularViewPagerHandler(viewPager);
         circularViewPagerHandler.setOnPageChangeListener(createOnPageChangeListener());
-        viewPager.addOnPageChangeListener(circularViewPagerHandler);
+        viewPager.setOnPageChangeListener(circularViewPagerHandler);
     }
 
     private ViewPager.OnPageChangeListener createOnPageChangeListener() {

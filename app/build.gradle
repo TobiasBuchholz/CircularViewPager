@@ -1,19 +1,19 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.1"
+    compileSdkVersion 20
+    buildToolsVersion "20.0.0"
 
     defaultConfig {
         applicationId "com.tobishiba.circularviewpager"
         minSdkVersion 15
-        targetSdkVersion 23
+        targetSdkVersion 20
         versionCode 1
         versionName "1.0"
     }
     buildTypes {
         release {
-            minifyEnabled false
+            runProguard false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -21,6 +21,6 @@ android {
 
 dependencies {
     compile project(':library')
+    compile files('libs/android-support-v4.jar')
     compile ('com.google.code.gson:gson:1.7.+')
-    compile 'com.android.support:support-v13:23.0.1'
 }

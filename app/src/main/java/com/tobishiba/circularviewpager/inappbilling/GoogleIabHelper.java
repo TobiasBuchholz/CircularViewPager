@@ -106,7 +106,6 @@ public class GoogleIabHelper {
 
     private void bindInAppBillingService() {
         final Intent serviceIntent = new Intent("com.android.vending.billing.InAppBillingService.BIND");
-        serviceIntent.setPackage("com.android.vending");
         if (!mContext.getPackageManager().queryIntentServices(serviceIntent, 0).isEmpty()) {
             mContext.bindService(serviceIntent, mServiceConnection, Context.BIND_AUTO_CREATE);
             mIsServiceBind = true;
